@@ -12,6 +12,7 @@ There’s no sure fire approach to solving a tricky algorithm problem, but the a
 其实解决复杂的算法问题时并没有什么良方高招，但是下面的介绍的5种方法还是有一定的实用性。下面的方法你练习的越多，就越能鉴别出用什么方法来解决问题。
 Also, remember that the five approaches can be “mixed and matched ” That is, once you’ve applied “Simplify & Generalize”, you may want to implement Pattern Matching next
 这5种方法并不是彼此独立的，也可能会交叉起来使用。比如同一个问题可能会用到“简化和一般化”和“套用常见方法”两种方法。
+
 APPROACH I: EXAMPLIFY
 法1：举例法
 Description: Write out specific examples of the problem, and see if you can figure out a general rule
@@ -28,6 +29,7 @@ By simple arithmetic, this reduces to 30 * hours - 5 5 * minutes
 *以12：00位置为起始点，那么时针的角度则是 360*(hour%12)/12 + 360*(minutes/60)*(1/12)
 *那两个指针之间的夹角是 (hour angle - minute angle)%360 
 化简上述式子就得到最后的公式: 30 * hours - 55 * minutes
+
 APPROACH II: PATTERN MATCHING
 法2：套用常见方法
 Description: Consider what problems the algorithm is similar to, and figure out if you can modify the solution to develop an algorithm for this problem
@@ -42,6 +44,7 @@ However, binary search is very applicable You know that the array is sorted, but
 If you compare the first and middle element (3 and 6), you know that the range is still increas-ing This means that the reset point must be after the 6 (or, 3 is the minimum element and the array was never rotated) We can continue to apply the lessons from binary search topinpoint this reset point, by looking for ranges where LEFT > RIGHT That is, for a particularpoint, if LEFT < RIGHT, then the range does not contain the reset If LEFT > RIGHT, then it does
 算法：查找最值并不是什么特别东西（你可以遍历数组然后找到最小值,即使提供了一些额外的信息,比如:数组已近排序)。刚才问题上额外信息似乎没有什么用。但是二分查找好像比较有用，因为给出的条件说数组已经排序过了。可是还做了一次循环移动。那么这个数组的模式应该这样的：先是升序，突然重置，接着继续升序。那么这个重置点就是最小值。
 比较第一个这个中间的元素(3和6)，这个是升序的。那么这说明了这个重置点在6之后的那一段(或者3就是最小是，因为数组没有循环移动过)。那么我可以继续采用这样方法进行二分查找。如果左边小于右边，说明重置点不在这个范围内；如果左边大于右边则重置点在这个范围内，继续进行二分查找。
+
 APPROACH III: SIMPLIFY & GENERALIZE
 法3：简化&一般化
 Description: Change a constraint (data type, size, etc) to simplify the problem Then try to solve it Once you have an algorithm for the “simplified” problem, generalize the problem again
@@ -54,6 +57,7 @@ Algorithm: We can solve the simplified ransom note problem with characters by si
 算法：对于这个简化的问题，我可以先创建一个数组用来给统计字符出现的次数。首先我们计算每个字母在敲诈信中出现的个数，然后在给出的字符串集合中是否有这么多的字母。
 When we generalize the algorithm, we do a very similar thing This time, rather than creating an array with character counts, we create a hash table Each word maps to the number of times the word appears
 再”一般化“-还原这个问题，我们可以采用非常类似的方法。这次我们采用的创建一个哈希表来映射每个单词映出现的次数。
+
 APPROACH IV: BASE CASE AND BUILD
 法4：简单构造法
 Description: Solve the algorithm first for a base case (e g , just one element) Then, try tosolve it for elements one and two, assuming that you have the answer for element one Then,try to solve it for elements one, two and three, assuming that you have the answer to ele-ments one and two
@@ -78,6 +82,7 @@ Algorithm: Use a recursive algorithm Generate all permutations of a string by �
 算法：递归。先截去字符串中的最后一个字母，生成所有s[1…n-1]的全排列，然后再将最后一个字母插入到每一个可插入的位置。
 NOTE: Base Case and Build Algorithms often lead to natural recursive algorithms
 注意：一般采用这样的构造法大多都会用到递归。
+
 APPROACH V: DATA STRUCTURE BRAINSTORM
 法5：数据结构头脑风暴
 Description: This is hacky, but it often works Simply run through a list of data structures and try to apply each one
