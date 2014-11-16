@@ -1,7 +1,7 @@
 Cracking-the-Coding-Interview-4Th
 =================================
 
-Solutions for the book: Cracking the coding interview V4. Written in Objective C.
+Solutions for the book: Cracking the coding interview V4. Written in Swift with playground.
 
 
 #开始面试-解算法问题的5大方法
