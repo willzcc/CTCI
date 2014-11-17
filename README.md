@@ -8,7 +8,7 @@ Solutions for the book: Cracking the coding interview V4. Written in Swift with 
 #Five Algorithm Approaches
 #算法无法？算法5法！
 
-There’s no sure fire approach to solving a tricky algorithm problem, but the approaches below can be useful Keep in mind that the more problems you practice, the easier it will to identify which approach to use
+>There’s no sure fire approach to solving a tricky algorithm problem, but the approaches below can be useful Keep in mind that the more problems you practice, the easier it will to identify which approach to use
 其实解决复杂的算法问题时并没有什么良方高招，但是下面的介绍的5种方法还是有一定的实用性。下面的方法你练习的越多，就越能鉴别出用什么方法来解决问题。
 Also, remember that the five approaches can be “mixed and matched ” That is, once you’ve applied “Simplify & Generalize”, you may want to implement Pattern Matching next
 这5种方法并不是彼此独立的，也可能会交叉起来使用。比如同一个问题可能会用到“简化和一般化”和“套用常见方法”两种方法。
