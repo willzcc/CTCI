@@ -1,7 +1,7 @@
 // 1.2 Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)
 
 // there is no '\0' at the end of string in swift, we use 'N' instead '\0', just for simulating in reverse1
-// Swift pass string by copy, we can not pass string by reference. We use a character array for simulating in reverse2
+// Swift pass string by copy, we can not pass string by reference. We use a character array for simulating C-Style char array in reverse2
 
 func reverse1(str: String) -> String {
     var end = 0
@@ -38,7 +38,6 @@ func reverse2(var str: [Character]) -> [Character] {
 }
 
 reverse2(Array("abcde\0"))
-
 
 
 
