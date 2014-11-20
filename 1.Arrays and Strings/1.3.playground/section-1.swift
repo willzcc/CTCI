@@ -7,10 +7,8 @@ func removeDuplicates(var str: [Character]) -> [Character] {
     }
     var tail = 1
     for i in 1..<str.count {
-//        println(i)
         var j: Int
         for j = 0; j < tail; ++j {
-//            println("j\(j)")
             if str[i] == str[j] {
                 break
             }
@@ -20,18 +18,39 @@ func removeDuplicates(var str: [Character]) -> [Character] {
             ++tail
         }
     }
-    str[tail] = "0"
     
-    for var x = 0; x < str.count; ++x {
+    if tail < str.count {
+        str[tail] = "0"
+    }
+
+    
+    for var x = 0; x < str.count; ++x {     // Remove characters after "0"
         if str[x] == "0" {
             let range = Range(start: x, end: str.count)
             str.removeRange(range)
+            break
         }
     }
     
     return str
 }
 
+removeDuplicates(Array("abcd"))
+removeDuplicates(Array("aaaa"))
 removeDuplicates(Array(""))
+removeDuplicates(Array("aaabbbcc"))
+removeDuplicates(Array("abcabcabc"))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
