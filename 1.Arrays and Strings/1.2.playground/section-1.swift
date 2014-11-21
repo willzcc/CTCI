@@ -21,6 +21,8 @@ reverse1("abcd12345N")
 reverse("abcd12345N")    // defualt swift reverse function
 
 
+
+
 func reverse2(var str: [Character]) -> [Character] {
     if str.count < 2 {
         return str
@@ -37,7 +39,23 @@ func reverse2(var str: [Character]) -> [Character] {
     return str
 }
 
-reverse2(Array("abcde\0"))
+reverse2(Array("abcdeN"))
+
+
+
+
+
+
+func reverse3(var str: [Character]) -> [Character] {
+    var revStr = [Character]()
+    for var i = 0; i < str.count - 1; i++ {
+        revStr = "\(str[i])" + revStr
+    }
+    return revStr + "N"
+}
+
+reverse3(Array("abcdefgN"))
+
 
 
 
