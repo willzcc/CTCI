@@ -24,7 +24,7 @@ func removeDuplicates(var str: [Character]) -> [Character] {
     }
 
     
-    for var x = 0; x < str.count; ++x {     // Remove characters after "0"
+    for var x = 0; x < str.count; ++x {     // Remove characters after "\0"
         if str[x] == "\0" {
             let range = Range(start: x, end: str.count)
             str.removeRange(range)
@@ -42,7 +42,7 @@ removeDuplicates(Array("aaabbbcc"))
 removeDuplicates(Array("abcabcabc"))
 
 
-
+// for commit
 
 
 
