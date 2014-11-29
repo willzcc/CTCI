@@ -1,4 +1,3 @@
-/**
 // Standard version
 
 func partition(inout dataList: [Int], low: Int, high: Int) -> Int {
@@ -7,10 +6,10 @@ func partition(inout dataList: [Int], low: Int, high: Int) -> Int {
     
     for var i = low + 1; i <= high; i++ {
         if dataList[i] < pivot && ++pivotPos != i {
-            (dataList[pivotPos], dataList[i]) = (dataList[i], dataList[pivotPos])
+            swap(&dataList[pivotPos], &dataList[i])
         }
     }
-    (dataList[low], dataList[pivotPos]) = (dataList[pivotPos], dataList[low])
+    swap(&dataList[low], &dataList[pivotPos])
     return pivotPos
 }
 
@@ -24,7 +23,7 @@ func quickSort(inout dataList: [Int], left: Int, right: Int) {
 
 var dataList = [42, 12, 88, 62, 63, 56, 1, 77, 88, 97, 97, 20, 45, 91, 62, 2, 15, 31, 59, 5]
 quickSort(&dataList, 0, dataList.count - 1)
-*/
+
 
 // Generic version quickSort
 func partition<T: Comparable>(inout dataList: [T], low: Int, high: Int) -> Int {
@@ -32,10 +31,10 @@ func partition<T: Comparable>(inout dataList: [T], low: Int, high: Int) -> Int {
     var pivot = dataList[low]
     for var i = low + 1; i <= high; i++ {
         if dataList[i] < pivot && ++pivotPos != i {
-            (dataList[pivotPos], dataList[i]) = (dataList[i], dataList[pivotPos])
+            swap(&dataList[pivotPos], &dataList[i])
         }
     }
-    (dataList[low], dataList[pivotPos]) = (dataList[pivotPos], dataList[low])
+    swap(&dataList[low], &dataList[pivotPos])
     return pivotPos
 }
 
