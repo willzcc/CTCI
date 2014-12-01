@@ -54,39 +54,6 @@ testCase1_5
 
 
 
-//// confused
-//
-//func removeDuplicates2(inout str: [Character]) {
-//    var tail = 1
-//    for i in 1 ..< str.count {
-//        var j = 0
-//        for x in 0 ..< tail {
-////1        for ; j < tail; j++ {
-//            j = x
-//            if str[i] == str[j] {
-//            println("i = \(i);j = \(j)")
-//                break
-//            }
-//            println("i = \(i);j = \(j)")
-//        }
-//        if j == tail {
-//            str[tail] = str[i]
-//            ++tail
-//        }
-//    }
-//    if tail < str.count {
-//        str[tail] = "\0"
-//    }
-//}
-//
-//var test1: [Character] = Array("aaabbbccc")
-//removeDuplicates2(&test1)
-//test1
-
-
-
-
-
 
 
 
