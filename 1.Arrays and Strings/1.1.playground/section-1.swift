@@ -13,6 +13,7 @@ func isUniqueChar1(str: String) -> Bool {
     return true
 }
 isUniqueChar1("abcd")
+isUniqueChar1("abcdd")
 
 
 // Macbook Air Core i5 64bit CPU ; OSX 10.10   Int equals to Int64
@@ -30,3 +31,5 @@ func isUniqueChar2(str: String) -> Bool {
 }
 
 isUniqueChar2("abcd")
+isUniqueChar2("abccd")
+
